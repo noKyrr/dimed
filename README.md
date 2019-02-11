@@ -23,6 +23,7 @@ usuario: admin, senha: 1234567890
 ou 
 headers: Key = "Authorization", Value = "Basic YWRtaW46MTIzNDU2Nzg5MA==" 
 
+Documentação da API Swagger: http://localhost:8080/swagger-ui.html#/
 
 -------------------------------------------------------------------------------------------
 1) Parte 1 
