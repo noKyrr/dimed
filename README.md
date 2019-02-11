@@ -14,7 +14,8 @@ Utilizado banco postgres com plugin postgis para tratar as requisições com coo
 Teste unitário com JUnit4
 Arquitetura de Serviços
 
-BACKUP DENTRO DA PASTA DO PROJETO, CASO TENHA DIFICULDADES EM IMPORTAR ALTERE O DDL-AUTO NAS PROPRIEDADES DO PROJETO.
+BACKUP DENTRO DA PASTA DO PROJETO.
+- CASO TENHA DIFICULDADES EM IMPORTAR ALTERE O DDL-AUTO NAS PROPRIEDADES DO PROJETO e execute a instrução sql: CREATE EXTENSION postgis;.
 Postman Collection disponível dentro da pastas do projeto.
 
 Security configurado como basic auth:
