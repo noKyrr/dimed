@@ -1,0 +1,527 @@
+{
+	"info": {
+		"_postman_id": "bf86e6dc-e040-4c0a-b6a3-e388e6984296",
+		"name": "Prova Dimed",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get lista pontos por id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://www.poatransporte.com.br/php/facades/process.php?a=il&p=5566",
+					"protocol": "http",
+					"host": [
+						"www",
+						"poatransporte",
+						"com",
+						"br"
+					],
+					"path": [
+						"php",
+						"facades",
+						"process.php"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "il"
+						},
+						{
+							"key": "p",
+							"value": "5566"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get lista itinerários",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://www.poatransporte.com.br/php/facades/process.php?a=nc&p=%25&t=o",
+					"protocol": "http",
+					"host": [
+						"www",
+						"poatransporte",
+						"com",
+						"br"
+					],
+					"path": [
+						"php",
+						"facades",
+						"process.php"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "nc"
+						},
+						{
+							"key": "p",
+							"value": "%25"
+						},
+						{
+							"key": "t",
+							"value": "o"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all buslines",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234567890",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/busline",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"busline"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all buslines with a filter",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234567890",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/busline/maio",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"busline",
+						"maio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all clients",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234567890",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\" : null,\n\t\"name\" : \"Cliente 1\",\n\t\"busLines\" : null\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/client",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"client"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Create Client",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234567890",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Cliente 1\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/client",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"client"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put Change client",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234567890",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 1,\n    \"name\": \"Cliente Alterado 1\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/client",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"client"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Remove client",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234567890",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/client/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"client",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put Add busline to client",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234567890",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/client/1/busline/5529",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"client",
+						"1",
+						"busline",
+						"5529"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete del busline to client",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234567890",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/client/1/busline/5529",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"client",
+						"1",
+						"busline",
+						"5529"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Search spots near busline and point",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234567890",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"lat\": -30.091436063109,\n    \"lng\": -51.179507284567,\n    \"lineId\": 5529,\n    \"radiusInMeters\": 200\n    \n}"
+				},
+				"url": {
+					"raw": "localhost:8080/busline/search",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"busline",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Search lines by spot and radius",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234567890",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"lat\": -30.091436063109,\n    \"lng\": -51.179507284567,\n    \"radiusInMeters\": 200\n    \n}"
+				},
+				"url": {
+					"raw": "localhost:8080/busline/spot/search",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"busline",
+						"spot",
+						"search"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
